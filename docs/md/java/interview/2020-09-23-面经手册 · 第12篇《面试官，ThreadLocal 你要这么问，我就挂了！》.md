@@ -506,7 +506,7 @@ if (!cleanSomeSlots(i, sz) && sz >= threshold)
 
 在我们阅读设置元素时，有以上这么一块代码，判断是否扩容。
 - 首先，进行`启发式清理*cleanSomeSlots*`，把过期元素清理掉，看空间是否
-- 之后，判断`sz >= threshold`，其中 `threshold = len * 2 / 3`，也就是说数组中天填充的元素，大于 `len * 2 / 3`，就需要扩容了。
+- 之后，判断`sz >= threshold`，其中 `threshold = len * 2 / 3`，也就是说数组中填充的元素，大于 `len * 2 / 3`，就需要扩容了。
 - 最后，就是我们要分析的重点，`rehash();`，扩容重新计算元素位置。
 
 ##### 4.3.2 源码分析
